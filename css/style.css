@@ -7,9 +7,9 @@ body{
 #page-container{
     display: grid;
     grid-template-areas:
-    "top top top top top"
-    "left left left left right"
-    "left left left left right";
+    "top top top top top top top top top top"
+    "left left left left left left left left left right"
+    "left left left left left left left left left right";
 }
 
 #inputs{
@@ -76,7 +76,6 @@ button:hover{
 #algorithms{
     background-color: aquamarine;
     grid-area: right;
-    display: flex;
     justify-content: center;
 }
 
