@@ -69,13 +69,37 @@ button:hover{
 }
 
 #array-size{
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 /* **************************************************************************************** */
 #algorithms{
     background-color: aquamarine;
     grid-area: right;
+    display: flex;
+    justify-content: center;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+li{
+    background-color: #555555;
+    color: #f1fbff;
+    border: 2px solid #555555;
+    margin-bottom: 10px;
+    padding: 12px 24px;
+    text-align: center;
+}
+li:last-child{
+    margin-bottom: 0px;
+}
+li:hover{
+    cursor: pointer;
+    background-color: #f1fbff;
+    color: #555555;
 }
 
 /* **************************************************************************************** */
