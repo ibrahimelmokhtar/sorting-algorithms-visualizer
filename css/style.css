@@ -65,7 +65,6 @@ button:hover{
 
 /* **************************************************************************************** */
 #algorithms{
-    /* background-color: aquamarine; */
     grid-area: right;
     justify-content: center;
 }
@@ -94,6 +93,5 @@ li:hover{
 
 /* **************************************************************************************** */
 #visualizer{
-    /* background-color: cadetblue; */
     grid-area: left;
 }

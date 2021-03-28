@@ -1,6 +1,7 @@
 // Global variables:
 let sliderValue = 0;
 let randomArray = [];
+let columnHeight = 500;
 
 // Set default values on page load:
 function setValue(){
@@ -23,7 +24,7 @@ function generateArray(){
 
     // Generate random numbers between 10 and 200:
     for (let i=0; i<sliderValue; i++){
-        let number = Math.floor((Math.random() * 200) + 10);
+        let number = Math.floor((Math.random() * 190) + 10);
         randomArray.push(number);
     }
     // Display generated numbers:
@@ -49,7 +50,7 @@ function visualizeNumbers(){
         // Specify new element's attributes:
         element.style.backgroundColor = "#555555";
         element.style.width = "30px";
-        element.style.height = "100px"
+        element.style.height = String(randomArray[i]*columnHeight/200) + "px";
         element.style.margin = "5px";
         element.style.padding = "5px";
         element.style.textAlign = "center";
