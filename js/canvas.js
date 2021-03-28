@@ -49,12 +49,14 @@ function visualizeNumbers(){
 
         // Specify new element's attributes:
         element.style.backgroundColor = "#555555";
-        element.style.width = "30px";
+        element.style.color = "#f1fbff";
+        element.style.width = String(300/(sliderValue)) + "px";
         element.style.height = String(randomArray[i]*columnHeight/200) + "px";
-        element.style.margin = "5px";
-        element.style.padding = "5px";
+        element.style.margin = "1px";
+        element.style.padding = "2px";
+
         element.style.textAlign = "center";
-        if (sliderValue < 20){
+        if (sliderValue <= 10){
             element.innerHTML = randomArray[i];
         }
         else{
