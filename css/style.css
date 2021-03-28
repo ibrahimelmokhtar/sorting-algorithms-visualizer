@@ -37,9 +37,8 @@ button:hover{
 }
 
 #slider-container{
-    margin-right: 10px;
+    margin: 0px 10px;
 }
-
 #slider{
     height: 10px;
     width: 600px;
@@ -49,27 +48,19 @@ button:hover{
     opacity: 0.7;
     transition: opacity .2s;
 }
-
-#slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    background: #4CAF50;
-    opacity: 1;
-    cursor: pointer;
-}
-
 #slider::-moz-range-thumb {
     width: 25px;
     height: 25px;
-    background: #4CAF50;
+    background-color: #f1fbff;
+    border: 2px solid #555555;
     opacity: 1;
     cursor: pointer;
 }
 
 #array-size{
-    margin-right: 10px;
+    background-color: #f1fbff;
+    margin: 0px 20px;
+    padding: 5px 30px;
 }
 
 /* **************************************************************************************** */

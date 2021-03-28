@@ -10,15 +10,15 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/canvas.js"></script>
 </head>
-<body>
+<body onload="setValue()">
     <div id="page-container">
         <div id="inputs">
-            <button>Create New Array</button>
+            <button onclick="generateArray()">Create New Array</button>
             <p id="slider-container">
                 <p>Change Array Size:</p>
-                <input type="range" min="2" max="200" value="100" id="slider">
+                <input type="range" min="5" max="100" value="50" id="slider" oninput="sliderChange(this.value)">
             </p>
-            <p>Array Size: <span id="array-size">100</span></p>
+            <p>Array Size: <span id="array-size">  </span></p>
         </div>
         <div id="algorithms">
             <ul>
@@ -29,7 +29,7 @@
                 <li>Bubble Sort</li>
             </ul>
         </div>
-        <div id="visualizer">Algirithm Visualizer</div>
+        <div id="visualizer">Algorithm Visualizer</div>
     </div>
 
 </body>
