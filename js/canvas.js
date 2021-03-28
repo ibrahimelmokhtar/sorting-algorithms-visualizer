@@ -2,11 +2,18 @@
 let sliderValue = 0;
 let randomArray = [];
 let columnHeight = 500;
+let algorithms = ["Insertion Sort", "Selection Sort", "Merge Sort", "Quick Sort", "Bubble Sort"];
 
 // Set default values on page load:
 function setValue(){
+    // Get slider value:
     document.getElementById("array-size").innerHTML = document.getElementById("slider").value;
     sliderValue = document.getElementById("slider").value;
+
+    // Display available algorithms:
+    displayAlgorithms();
+
+    // Generate random numbers:
     generateArray();
 }
 
@@ -65,5 +72,15 @@ function visualizeNumbers(){
 
         // Add new element into (visualizer) element:
         visualizer.appendChild(element);
+    }
+}
+
+function displayAlgorithms(){
+    let ulAlgorithms = document.getElementsByTagName("ul")[0];
+    ulAlgorithms.innerHTML = "";
+    for (let i=0; i<algorithms.length; i++){
+        let element = document.createElement("li");
+        element.innerHTML = algorithms[i];
+        ulAlgorithms.appendChild(element);
     }
 }
