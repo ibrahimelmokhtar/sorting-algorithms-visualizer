@@ -85,9 +85,34 @@ function displayAlgorithms(){
     for (let i=0; i<algorithms.length; i++){
         let element = document.createElement("li");
         element.id = String(algorithms[i]).toLowerCase().replace(' ', '-');
-        element.onclick = insertionSort;
+        setSortingFunction(element);
         element.innerHTML = algorithms[i];
         ulAlgorithms.appendChild(element);
+    }
+}
+
+function setSortingFunction(element){
+    switch (element.id){
+        case "insertion-sort":
+            element.onclick = insertionSort;
+            break;
+        case "selection-sort":
+            element.onclick = selectionSort;
+            break;
+        case "merge-sort":
+            element.onclick = mergeSort;
+            break;
+        case "quick-sort":
+            element.onclick = quickSort;
+            break;
+        case "bubble-sort":
+            element.onclick = bubbleSort;
+            break;
+        case "heap-sort":
+            element.onclick = heapSort;
+            break;
+        default:
+            console.log("Wrong Algorithm!");
     }
 }
 
@@ -115,7 +140,7 @@ function displayAlgorithms(){
  */
 
 function insertionSort(){
-    // randomArray = [9, 5, 1, 4, 3];
+    console.clear();
     console.log(`Unsorted:\t${randomArray}`);
     for (let i=1; i<randomArray.length; i++){
         let lastSortedIndex = i;
@@ -134,4 +159,39 @@ function insertionSort(){
         }
     }
     console.log(`Sorted\t:\t${randomArray}`);
+}
+
+
+/* **************************************************************************************** */
+
+function selectionSort(){
+    console.log("selection sort");
+}
+
+
+/* **************************************************************************************** */
+
+function mergeSort(){
+    console.log("merge sort");
+}
+
+
+/* **************************************************************************************** */
+
+function quickSort(){
+    console.log("quick sort");
+}
+
+
+/* **************************************************************************************** */
+
+function bubbleSort(){
+    console.log("bubble sort");
+}
+
+
+/* **************************************************************************************** */
+
+function heapSort(){
+    console.log("heap sort");
 }
