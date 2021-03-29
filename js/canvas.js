@@ -86,6 +86,8 @@ function displayAlgorithms(){
         let element = document.createElement("li");
         element.id = String(algorithms[i]).toLowerCase().replace(' ', '-');
         setSortingFunction(element);
+        element.style.borderRadius = "8px";
+        element.onmouseover = function(){element.style.cursor = "pointer";};
         element.innerHTML = algorithms[i];
         ulAlgorithms.appendChild(element);
     }
@@ -116,6 +118,23 @@ function setSortingFunction(element){
     }
 }
 
+function enableAndDisableAlgorithm(callerID){
+    let childNodes = document.getElementsByTagName("ul")[0].childNodes;
+    for (let i=0; i<childNodes.length; i++){
+        childNodes[i].classList.remove("disabled");
+        childNodes[i].classList.remove("enabled");
+        if (childNodes[i].id == callerID){
+            childNodes[i].onmouseover = function(){childNodes[i].style.cursor = "pointer";};
+            childNodes[i].classList.add("enabled");
+        }
+        else{
+            childNodes[i].onmouseover = function(){childNodes[i].style.cursor = "wait";};
+            childNodes[i].classList.add("disabled");
+        }
+    }
+}
+
+
 /* **************************************************************************************** */
 /**
  * Pseudocode:
@@ -141,6 +160,7 @@ function setSortingFunction(element){
 
 function insertionSort(){
     console.clear();
+    enableAndDisableAlgorithm("insertion-sort");
     console.log(`Unsorted:\t${randomArray}`);
     for (let i=1; i<randomArray.length; i++){
         let lastSortedIndex = i;
@@ -165,6 +185,7 @@ function insertionSort(){
 /* **************************************************************************************** */
 
 function selectionSort(){
+    enableAndDisableAlgorithm("selection-sort");
     console.log("selection sort");
 }
 
@@ -172,6 +193,7 @@ function selectionSort(){
 /* **************************************************************************************** */
 
 function mergeSort(){
+    enableAndDisableAlgorithm("merge-sort");
     console.log("merge sort");
 }
 
@@ -179,6 +201,7 @@ function mergeSort(){
 /* **************************************************************************************** */
 
 function quickSort(){
+    enableAndDisableAlgorithm("quick-sort");
     console.log("quick sort");
 }
 
@@ -186,6 +209,7 @@ function quickSort(){
 /* **************************************************************************************** */
 
 function bubbleSort(){
+    enableAndDisableAlgorithm("bubble-sort");
     console.log("bubble sort");
 }
 
@@ -193,5 +217,6 @@ function bubbleSort(){
 /* **************************************************************************************** */
 
 function heapSort(){
+    enableAndDisableAlgorithm("heap-sort");
     console.log("heap sort");
 }

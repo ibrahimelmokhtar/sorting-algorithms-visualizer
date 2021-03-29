@@ -88,7 +88,6 @@ li:last-child{
     margin-bottom: 0px;
 }
 li:hover{
-    cursor: pointer;
     background-color: #f1fbff;
     color: #555555;
 }
@@ -98,4 +97,12 @@ li:hover{
     grid-area: left;
     /* background-color: darkseagreen; */
     width: 1090px;
+}
+
+.enabled{
+    opacity: 1;
+}
+
+.disabled{
+    opacity: 0.2;
 }
